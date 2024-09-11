@@ -1,8 +1,10 @@
 
+/* Bakfrunds Farge */
 body {
     background-color: rgb(153, 153, 153);
   }
     
+/* Classes */
   header {
     background-color: #666;
     border: 2px solid black;
