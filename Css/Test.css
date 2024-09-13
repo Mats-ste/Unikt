@@ -26,30 +26,7 @@ body {
     border: 2px solid black;
     padding: 1px;
   }
-  a:link {
-    color: rgb(0, 0, 255);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  a:visited {
-    color: rgb(0, 0, 255);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  
-  a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-    box-sizing: border-box;
-  }
-  
+
   .left {
     background-color: #2196F3;
     padding: 20px;
@@ -84,4 +61,29 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
+}
+
+/* Links color*/
+a:link {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+  box-sizing: border-box;
 }
