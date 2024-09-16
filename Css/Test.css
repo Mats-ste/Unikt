@@ -15,7 +15,7 @@ body {
   }
   .city {
     background-color: rgb(202, 202, 202);
-    color: white;
+    color: rgb(0, 0, 0);
     border: 2px solid black;
     margin: 20px;
     padding: 20px;
@@ -42,10 +42,13 @@ body {
   }
   
   .right {
-    background-color: #04AA6D;
-    padding: 20px;
-    float: left;
+    float: right;
     width: 21%; /* The width is 20%, by default */
+    background-color: rgb(202, 202, 202);
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
   }
   
   /* Use a media query to add a break point at 800px: */
