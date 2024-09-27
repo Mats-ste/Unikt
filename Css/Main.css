@@ -1,12 +1,12 @@
 
 /* Bakfrunds Farge */
 body {
-    background-color: rgb(153, 153, 153);
+    background-color: #0F5075;
   }
     
 /* Classes */
   header {
-    background-color: #666;
+    background-color: #7CBDC4;
     border: 2px solid black;
     padding: 30px;
     text-align: center;
@@ -14,24 +14,18 @@ body {
     color: white;
   }
   .city {
-    background-color: rgb(202, 202, 202);
+    background-color: #fff5d4;
     color: rgb(0, 0, 0);
     border: 2px solid black;
     margin: 20px;
     padding: 20px;
+    width: 80%; /* The width is 60%, by default */
   }
   .body {
-    background-color: rgb(142, 142, 142);
-    color: white;
+    background-color: #fef5ea;
+    color: rgb(0, 0, 0);
     border: 2px solid black;
     padding: 1px;
-  }
-
-  .left {
-    background-color: #2196F3;
-    padding: 20px;
-    float: left;
-    width: 21%; /* The width is 20%, by default */
   }
   
   .main {
@@ -43,12 +37,12 @@ body {
   
   .right {
     float: right;
-    width: 21%; /* The width is 20%, by default */
-    background-color: rgb(202, 202, 202);
+    width: 11%; /* The width is 20%, by default */
+    background-color: #fff5d4;
     color: rgb(0, 0, 0);
     border: 2px solid black;
-    margin: 10px;
-    padding: 10px;
+    margin: 20px;
+    padding: 20px;
   }
   
   /* Use a media query to add a break point at 800px: */
