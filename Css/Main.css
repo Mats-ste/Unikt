@@ -19,8 +19,18 @@ body {
     border: 2px solid black;
     margin: 20px;
     padding: 20px;
+    width: 100%; /* The width is 60%, by default */
+  }
+
+  .city2 {
+    background-color: #fff5d4;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
     width: 80%; /* The width is 60%, by default */
   }
+
   .body {
     background-color: #f9e2cb;
     color: rgb(0, 0, 0);
