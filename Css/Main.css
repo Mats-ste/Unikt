@@ -74,21 +74,25 @@ footer {
 a:link {
   color: rgb(0, 0, 126);
   text-decoration: none;
+  font-size: 30px;
 }
 a:visited {
   color: rgb(0, 0, 126);
   text-decoration: none;
+  font-size: 30px;
 }
 
 a:hover {
   color: rgb(128, 0, 0);
   text-decoration: underline;
+  font-size: 45px;
 }
 
 a:active {
   color: yellow;
   text-decoration: underline;
   box-sizing: border-box;
+  font-size: 30px;
 }
 
 /* Buttons */
