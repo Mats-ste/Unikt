@@ -63,7 +63,7 @@ body {
   } 
 /* Style the footer */
 footer {
-  background-color: #777;
+  background-color: #5da8b0;
   border: 2px solid black;
   padding: 10px;
   text-align: center;
@@ -125,7 +125,7 @@ a:active {
 /* Top Navigation */
 .topnav {
   overflow: hidden;
-  background-color: #c1c1c1;
+  background-color: #ffffff;
   border: 2px solid black;
 }
 
