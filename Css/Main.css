@@ -53,6 +53,24 @@ header {
   flex: 1; /* Sørger for at body strekker seg og tar opp tilgjengelig plass */
 }
 
+/* Styling for vcity-seksjoner */
+.vcity {
+  background-color: #ffffff; /* Hvit bakgrunn for kontrast */
+  color: #333333; /* Mørkegrå tekstfarge */
+  border: 2px solid #4caf50; /* Grønn border */
+  margin: 20px 300px 20px; /* Set top margin to 0, left/right margin to 20px, and bottom margin to 20px */
+  padding: 20px;
+}
+
+/* Styling for vbody-seksjon */
+.vbody {
+  background-color: #f1f8e9; /* Veldig lys grønn bakgrunn */
+  color: #333333; /* Mørkegrå tekstfarge */
+  border: 2px solid #4caf50; /* Grønn border */
+  padding: 5px;
+  flex: 1; /* Sørger for at body strekker seg og tar opp tilgjengelig plass */
+}
+
 /* Media query for å endre layout ved skjermbredder mindre enn 800px */
 @media screen and (max-width: 800px) {
   .left, .main, .right {
@@ -157,3 +175,17 @@ a:active {
   background-color: #1b5e20; /* Mørk grønn for aktiv lenke */
   color: white; /* Hvit tekst for aktiv lenke */
 }
+
+.float-img {
+  float: right; /* Align images to the right */
+  margin-left: 15px; /* Add some space between the image and the text */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Clear floats after the last image */
+.body::after {
+  content: "";
+  display: table;
+  clear: both; /* Ensures the parent element clears the floats */
+}
+
