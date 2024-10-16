@@ -2,46 +2,57 @@
 <html lang="no">
 <head>
   <title> Bilde Bakgrunn </title>
-    <!--Detter er titelen til netsiden-->
-  <meta charset="utf-8">
-    <!-- utf-8 gjør at vi kan bruke æ, ø og å -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Detter gjør at det ser bra ut på en telefon-->
-</head>
-  <link rel="stylesheet" href="../Css/Main.css">
+  <!-- Dette er tittelen som vises i nettleserfanen -->
 
+  <meta charset="utf-8">
+  <!-- Utf-8 tillater bruk av norske tegn som æ, ø, og å -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Gjør siden responsiv og ser bra ut på mobiltelefoner -->
+
+  <link rel="stylesheet" href="../Css/Main.css">
+  <!-- Laster inn eksternt CSS-stilark for felles styling -->
+  
   <style>
+    /* Bakgrunnsinnstillinger for siden */
     body {
-      background-image:url(../Bilder/Cyan.jpg) ;
-      background-repeat: no-repeat;
-      background-attachment: fixed;  
-      background-size: cover;
+      background-image: url(../Bilder/Cyan.jpg); /* Bakgrunnsbilde */
+      background-repeat: no-repeat; /* Hindrer gjentakelse av bildet */
+      background-attachment: fixed;  /* Gjør at bakgrunnsbilde ikke beveger seg ved scrolling */
+      background-size: cover; /* Bildet dekker hele skjermen */
     }
   </style>
-    <!-- Dette gjør at bakgrunden til et bilde som fyller helle kjermen-->
+  <!-- Dette setter bakgrunnen som et bilde som fyller hele skjermen -->
+</head>
+
 <body>
 
+  <!-- Navigasjonsmeny -->
   <div class="topnav">
-    <a href="../index.html"> Hjem </a>
-    <a href="https://www.w3schools.com" target="_blank"> w3schools </a>
-    <a class="active" href="#"> Bilde Bakgrunnen </a>
-    <a href="Testing Youtube.html"> Youtube video </a>
-    <a href="Om Meg.html"> Om Meg </a>
-    <a href="../Engelsk/Blog.html">Engelsk Blog</a>
+    <a href="../index.html"> Hjem </a> <!-- Link tilbake til hjemmesiden -->
+    <a href="https://www.w3schools.com" target="_blank"> w3schools </a> <!-- Åpner W3Schools i en ny fane -->
+    <a class="active" href="#"> Bilde Bakgrunnen </a> <!-- Aktiv lenke (viser at vi er på denne siden) -->
+    <a href="Testing Youtube.html"> Youtube video </a> <!-- Link til YouTube-videosiden -->
+    <a href="Om Meg.html"> Om Meg </a> <!-- Link til "Om Meg"-siden -->
+    <a href="../Engelsk/Blog.html">Engelsk Blog</a> <!-- Link til den engelske bloggen -->
   </div>
 
+  <!-- Header for siden -->
   <header>
-    <h2>A picture</h2>
+    <h2>A picture</h2> <!-- Sidespesifikk overskrift -->
   </header>
 
+  <!-- Innholdsseksjon med en lenke til det opprinnelige bildet -->
   <div class="city">
-    <a href="https://www.freepik.com/free-vector/cyan-blue-watercolour-background_44156937.htm#query=cyan%20background&position=3&from_view=keyword&track=ais_hybrid&uuid=1a4a2f7d-e6be-40d8-bcf8-41141cb43f2c" target="_blank"> 
-      <p style="font-size: 22px;">The Original Picture</p>
+    <a href="https://www.freepik.com/free-vector/cyan-blue-watercolour-background_44156937.htm#query=cyan%20background&position=3&from_view=keyword&track=ais_hybrid&uuid=1a4a2f7d-e6be-40d8-bcf8-41141cb43f2c" target="_blank">
+      <p style="font-size: 22px;">The Original Picture</p> <!-- Informasjon og lenke til kilden for bakgrunnsbildet -->
     </a>
   </div>
 
+  <!-- Footer med en link tilbake til hjemmesiden -->
   <footer>
     <a style="font-size: 25px;" href="../index.html">Go back</a> 
+    <!-- Link tilbake til forsiden -->
   </footer>
 
 </body>

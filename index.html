@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="no">
-  <!--Du må altid skrive dette i en html kode-->
+  <!--Du må alltid skrive dette i en HTML-kode for å definere dokumenttypen-->
 <head>
   <title> Min nettside </title>
-    <!--Detter er titelen til netsiden-->
+    <!--Dette er tittelen til nettsiden, som vises på nettleserfanen-->
   <meta charset="utf-8">
-    <!-- utf-8 gjør at vi kan bruke æ, ø og å -->
+    <!--UTF-8 gjør at vi kan bruke spesialtegn som æ, ø og å-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Detter gjør at det ser bra ut på en telefon-->
+    <!--Dette gjør at nettsiden ser bra ut på forskjellige skjermstørrelser, som telefoner-->
 </head>
   <link rel="stylesheet" href="Css/Main.css">
-    <!-- <link> linker en html med en css eller en js-->
+    <!-- <link> brukes for å koble HTML-dokumentet med en CSS-fil (eller JS-fil)-->
   <style>
     li {
     margin-bottom: 4px;
@@ -18,55 +18,59 @@
   </style>   
 <body>
 
+  <!-- Navigasjonsmenyen som vises øverst på siden -->
   <div class="topnav">
-     <a class="active" href="#">Hjem</a>
-     <a href="https://www.w3schools.com" target="_blank"> W3schools </a>
-     <a href="HTML/Test Bilde.html"> Bilde Bakgrunnen </a>
-     <a href="HTML/Testing Youtube.html"> Youtube video </a>
-     <a href="HTML/Om Meg.html"> Om Meg </a>
-     <a href="Engelsk/Blog.html">Engelsk Blog</a>
+     <a class="active" href="#">Hjem</a> <!-- 'active' gjør at "Hjem" er uthevet -->
+     <a href="https://www.w3schools.com" target="_blank"> W3schools </a> <!-- Lenke til W3Schools, åpner i ny fane -->
+     <a href="HTML/Test Bilde.html"> Bilde Bakgrunnen </a> <!-- Lenke til en side med bildebakgrunn -->
+     <a href="HTML/Testing Youtube.html"> Youtube video </a> <!-- Lenke til en side med innebygd YouTube-video -->
+     <a href="HTML/Om Meg.html"> Om Meg </a> <!-- Lenke til en side om deg selv -->
+     <a href="Engelsk/Blog.html">Engelsk Blog</a> <!-- Lenke til en engelsk blog-side -->
   </div>
 
+  <!-- Hovedoverskriften på nettsiden -->
   <header>
-    <h1>Velkomen Til Nettsiden Min!</h1>
+    <h1>Velkommen Til Nettsiden Min!</h1>
   </header>
   
+  <!-- En seksjon med innhold og en lenke til W3Schools -->
   <div class="city">
     <a href="https://www.w3schools.com" target="_blank">Gå Til w3schools</a>
-      <!-- target="_blank" gjør at linken blir åpnet i en ny side-->
+      <!-- target="_blank" gjør at lenken åpnes i en ny fane -->
     <p> </p>
     <div class="body">
-      <p style="font-size: 20px;">Denne lenken vil åpne en ny fanne med w3schools.</p>
+      <p style="font-size: 20px;">Denne lenken vil åpne en ny fane med w3schools.</p>
     </div>
   </div>
 
+  <!-- En seksjon med lenke til Test Bilde-siden -->
   <div class="city">
     <a href="HTML/Test Bilde.html">Gå Til Bakgrunnen Bilde</a>
     <p> </p>
     <div class="body">
-      <p style="font-size: 20px;">Denne lenken vil ta deg til HTML fillen Test Bilde, her er bakgrunnen et bilde av Charles Leclerc.</p>
+      <p style="font-size: 20px;">Denne lenken vil ta deg til HTML-filen Test Bilde, her er bakgrunnen et bilde av Charles Leclerc.</p>
     </div>
   </div>
 
+  <!-- En seksjon med lenke til Testing Youtube-siden -->
   <div class="city">
     <a href="HTML/Testing Youtube.html">Gå til en Youtube video</a>
     <p> </p>
     <div class="body">
-      <p style="font-size: 20px;">Denne lenken vil ta deg til HTML fillen Teting Youtube, her er det en Youtube Video bygget in i nettsiden.</p>
+      <p style="font-size: 20px;">Denne lenken vil ta deg til HTML-filen Testing Youtube, her er det en Youtube-video bygget inn i nettsiden.</p>
     </div>
   </div>
 
+  <!-- En seksjon med lenke til "Om Meg"-siden -->
   <div class="city">
     <a href="HTML/Om Meg.html">Om Meg</a>
     <p></p>
     <div class="body">
-      <p style="font-size: 20px;">Denne lenken tar deg en side der jeg har skrevet litt om meg selv.
-      </p>
+      <p style="font-size: 20px;">Denne lenken tar deg til en side der jeg har skrevet litt om meg selv.</p>
     </div>
   </div>
 
-
-
+  <!-- Bunntekst for nettsiden -->
   <footer>
     <p style="font-size: 25px;">"This is the end"</p>
   </footer>
