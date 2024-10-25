@@ -8,7 +8,10 @@
   <!-- Angir hvordan dokumentet skal vises på forskjellige skjermstørrelser -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Knytter til CSS-filen for styling av bloggen -->
-  <link rel="stylesheet" href="../Css/Main.css"> <!-- Relativ lenke til CSS-filen -->
+    <!-- Default Style -->
+    <link id="stylesheet1" rel="stylesheet" href="../Css/Main.css">
+    <!-- Alternative Style -->
+    <link id="stylesheet2" rel="stylesheet" href="../Css/Dark.css" disabled>
 </head>
 
 <body>
@@ -20,6 +23,8 @@
     <a href="../HTML/Testing Youtube.html">Youtube video</a> <!-- Lenke til YouTube-side -->
     <a href="../HTML/Om Meg.html">Om Meg</a> <!-- Lenke til 'Om Meg'-siden -->
     <a class="active" href="#">Engelsk Blog</a> <!-- Aktiv lenke for den nåværende siden -->
+    <a href="#" id="switchButton">Dark</a>
+    <script src="../Js/switch.js"></script>
   </div>
 
   <!-- Hovedoverskrift for bloggen -->

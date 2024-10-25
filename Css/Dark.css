@@ -1,0 +1,188 @@
+/* Bakgrunnsfarge for hele nettsiden */
+body {
+  background-color: #121212; /* Mørk grå bakgrunn */
+  color: #e0e0e0; /* Lys grå tekst */
+}
+
+/* Klasser */
+
+/* Styling for header-delen */
+header {
+  background-color: #2e7d32; /* Mørk grønn */
+  border: 2px solid #1b5e20; /* Mørkere grønn for border */
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #ffffff; /* Hvite bokstaver for kontrast */
+}
+
+/* Styling for city-seksjoner */
+.city {
+  background-color: #1e1e1e; /* Mørk grå bakgrunn for kontrast */
+  color: #e0e0e0; /* Lys grå tekstfarge */
+  border: 2px solid #2e7d32; /* Mørk grønn border */
+  margin: 20px;
+  padding: 20px;
+}
+
+/* Styling for container som holder flere elementer */
+.container {
+  display: flex;
+  justify-content: space-between; 
+  margin: 20px;
+  align-items: stretch;
+}
+
+/* Styling for venstre og høyre seksjon i container */
+.left, .right {
+  background-color: #1e1e1e; /* Mørk grå bakgrunn */
+  color: #e0e0e0; /* Lys grå tekstfarge */
+  border: 2px solid #2e7d32; /* Mørk grønn border */
+  padding: 20px;
+  width: 46.7%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for body-seksjon */
+.body {
+  background-color: #121212; /* Svartaktig grå bakgrunn */
+  color: #e0e0e0; /* Lys grå tekstfarge */
+  border: 2px solid #2e7d32;
+  padding: 1px;
+  flex: 1;
+}
+
+/* Styling for vcity-seksjoner */
+.vcity {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 2px solid #2e7d32;
+  margin: 20px 300px 20px;
+  padding: 20px;
+}
+
+/* Styling for vbody-seksjon */
+.vbody {
+  background-color: #121212;
+  color: #e0e0e0;
+  border: 2px solid #2e7d32;
+  padding: 5px;
+  flex: 1;
+}
+
+/* Media query for å endre layout ved skjermbredder mindre enn 800px */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%;
+  }
+}
+
+/* Styling for footer */
+footer {
+  background-color: #2e7d32;
+  border: 2px solid #1b5e20;
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Styling for lenker */
+
+/* Standard farge for lenker */
+a:link {
+  color: #81c784; /* Lys grønn */
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/* Farge for besøkte lenker */
+a:visited {
+  color: #81c784;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/* Farge og stil ved hover over lenker */
+a:hover {
+  color: #66bb6a; /* Mørkere grønn */
+  text-decoration: underline;
+  font-size: 45px;
+}
+
+/* Farge og stil når lenker er aktive */
+a:active {
+  color: #ffeb3b; /* Lys gul */
+  text-decoration: underline;
+  font-size: 30px;
+}
+
+/* Styling for knapper */
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Spesifikke farger for button1 */
+.button1 {
+  background-color: #388e3c; /* Mørk grønn */
+  color: #ffffff; 
+  border: 2px solid #121212; /* Svartaktig border */
+}
+
+/* Hover-effekt for button1 */
+.button1:hover {
+  background-color: #1b5e20;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+/* Styling for top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #1e1e1e; /* Mørk grå */
+  border: 2px solid #2e7d32;
+}
+
+/* Styling for lenker i navigasjonsmenyen */
+.topnav a {
+  float: left;
+  color: #81c784; /* Lys grønn tekst */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Hover-effekt for lenker i navigasjonsmenyen */
+.topnav a:hover {
+  background-color: #333333; /* Mørkere bakgrunn */
+  color: #66bb6a;
+}
+
+/* Aktiv lenke i navigasjonsmenyen */
+.topnav a.active {
+  background-color: #1b5e20;
+  color: white;
+}
+
+.float-img {
+  float: right;
+  margin-left: 15px;
+  height: auto;
+}
+
+/* Clear floats after the last image */
+.body::after {
+  content: "";
+  display: table;
+  clear: both;
+}
