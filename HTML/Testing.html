@@ -3,40 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Endre tekst med lenke</title>
-    <style>
-        #text {
-            font-size: 24px;
-            margin: 20px;
-        }
-        a {
-            text-decoration: none;
-            color: blue;
-            cursor: pointer;
-            font-size: 18px;
-        }
-    </style>
+    <title>Inndata og Summering</title>
 </head>
 <body>
-    <h1>Velkommen til min nettside</h1>
-    
-    <div id="text">Her er den opprinnelige teksten.</div> <!-- Opprinnelig tekst -->
-    <a href="#" id="switchButton">Mørk</a> <!-- Lenken for å endre teksten -->
+    <p id="userData"></p>
+    <p id="sumResult"></p>
 
-    <script>
-        const textElement = document.getElementById("text");
-        const button = document.getElementById("switchButton");
-        let isOriginalText = true;
-
-        button.addEventListener("click", (event) => {
-            event.preventDefault(); // Forhindre at lenken oppdaterer siden
-            if (isOriginalText) {
-                button.textContent = "Lys"; // Endre teksten på lenken
-            } else {
-                button.textContent = "Mørk"; // Tilbake til original tekst på lenken
-            }
-            isOriginalText = !isOriginalText; // Bytt tilstand
-        });
-    </script>
+    <!-- Koble til JavaScript-filen -->
+    <script src="../Js/Prompt.js"></script>
 </body>
 </html>
