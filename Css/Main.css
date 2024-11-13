@@ -166,8 +166,8 @@ a:active {
 
 /* Hover-effekt for lenker i navigasjonsmenyen */
 .topnav a:hover {
-  background-color: #e0f2f1; /* Lys teal ved hover */
-  color: #388e3c; /* Mørk grønn tekst ved hover */
+  background-color:  	#50C878; /* Lys teal ved hover */
+  color: #003403; /* Mørk grønn tekst ved hover */
 }
 
 /* Aktiv lenke i navigasjonsmenyen */
