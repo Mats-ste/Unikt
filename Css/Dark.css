@@ -1,112 +1,113 @@
 /* Bakgrunnsfarge for hele nettsiden */
 body {
-  background-color: #1a1a1a; /* Mørk bakgrunn */
+  background-color: #263238; /* Mørk gråblå bakgrunn */
+  color: #eceff1; /* Lys tekst for kontrast */
 }
 
 /* Klasser */
 
 /* Styling for header-delen */
 header {
-  background-color: #2e7d32; /* Mørkere grønn */
-  border: 2px solid #1b5e20; /* Enda mørkere grønn for border */
+  background-color: #2c6e49; /* Mørkere grønn bakgrunn */
+  border: 2px solid #1b4d35; /* Mørkere grønn for border */
   padding: 30px;
   text-align: center;
   font-size: 35px;
-  color: white; /* Hvite bokstaver for kontrast */
+  color: #eceff1; /* Lys tekstfarge for kontrast */
 }
 
 /* Styling for city-seksjoner */
 .city {
-  background-color: #424242; /* Mørk grå bakgrunn for kontrast */
-  color: #e0e0e0; /* Lys grå tekstfarge */
-  border: 2px solid #2e7d32; /* Mørkere grønn border */
+  background-color: #37474f; /* Mørk grå bakgrunn */
+  color: #eceff1; /* Lys tekstfarge */
+  border: 2px solid #8eb69b; /* Beholder hovedfargen for border */
   margin: 20px;
   padding: 20px;
 }
 
 /* Styling for container som holder flere elementer */
 .container {
-  display: flex; /* Holder mellomrom mellom div-elementer */
-  justify-content: space-between; 
+  display: flex;
+  justify-content: space-between;
   margin: 20px;
-  align-items: stretch; /* Sørger for at alle flex-elementer strekker seg til lik høyde */
+  align-items: stretch;
 }
 
 /* Styling for venstre og høyre seksjon i container */
 .left, .right {
-  background-color: #424242; /* Mørk grå bakgrunn */
-  color: #e0e0e0; /* Lys grå tekstfarge */
-  border: 2px solid #2e7d32; /* Mørkere grønn border */
+  background-color: #37474f; /* Mørk grå bakgrunn */
+  color: #eceff1; /* Lys tekstfarge */
+  border: 2px solid #8eb69b; /* Beholder hovedfargen for border */
   padding: 20px;
-  width: 46.7%; /* Litt mindre enn 50% for å få plass til margin */
-  display: flex; /* Bruker flexbox for layout */
-  flex-direction: column; /* Sørger for at innholdet vises vertikalt */
+  width: 46.7%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Styling for body-seksjon */
 .body {
-  background-color: #303030; /* Mørk grå bakgrunn */
-  color: #e0e0e0; /* Lys grå tekstfarge */
-  border: 2px solid #2e7d32; /* Mørkere grønn border */
+  background-color: #455a64; /* Mørk blågrå bakgrunn */
+  color: #eceff1; /* Lys tekstfarge */
+  border: 2px solid #8eb69b; /* Beholder hovedfargen for border */
   padding: 1px;
-  flex: 1; /* Sørger for at body strekker seg og tar opp tilgjengelig plass */
+  flex: 1;
 }
 
 /* Styling for vcity-seksjoner */
 .vcity {
-  background-color: #424242; /* Mørk grå bakgrunn for kontrast */
-  color: #e0e0e0; /* Lys grå tekstfarge */
-  border: 2px solid #2e7d32; /* Mørkere grønn border */
-  margin: 20px 300px 20px; /* Set top margin to 0, left/right margin to 20px, and bottom margin to 20px */
+  background-color: #37474f; /* Mørk grå bakgrunn */
+  color: #eceff1; /* Lys tekstfarge */
+  border: 2px solid #8eb69b; /* Beholder hovedfargen for border */
+  margin: 20px 300px 20px;
   padding: 20px;
 }
 
 /* Styling for vbody-seksjon */
 .vbody {
-  background-color: #303030; /* Mørk grå bakgrunn */
-  color: #e0e0e0; /* Lys grå tekstfarge */
-  border: 2px solid #2e7d32; /* Mørkere grønn border */
+  background-color: #455a64; /* Mørk blågrå bakgrunn */
+  color: #eceff1; /* Lys tekstfarge */
+  border: 2px solid #8eb69b; /* Beholder hovedfargen for border */
   padding: 5px;
-  flex: 1; /* Sørger for at body strekker seg og tar opp tilgjengelig plass */
+  flex: 1;
 }
 
 /* Media query for å endre layout ved skjermbredder mindre enn 800px */
 @media screen and (max-width: 800px) {
   .left, .main, .right {
-    width: 100%; /* Gjør seksjonene 100% brede ved små skjermer */
+    width: 100%;
   }
 }
 
 /* Styling for footer */
 footer {
-  background-color: #2e7d32; /* Mørkere grønn bakgrunn */
-  border: 2px solid #1b5e20; /* Enda mørkere grønn for border */
+  background-color: #2c6e49; /* Mørkere grønn bakgrunn */
+  border: 2px solid #1b4d35; /* Mørkere grønn for border */
   padding: 10px;
   text-align: center;
-  color: white; /* Hvite tekst for kontrast */
+  color: #eceff1; /* Lys tekstfarge */
 }
 
 /* Styling for lenker */
 
 /* Standard farge for lenker */
 a:link {
-  color: #81c784; /* Lysere grønn */
+  color: #8eb69b; /* Hovedfargen for lenker */
   text-decoration: none;
   font-size: 30px;
 }
 
 /* Farge for besøkte lenker */
 a:visited {
-  color: #81c784; /* Lysere grønn */
+  color: #8eb69b; /* Hovedfargen for lenker */
   text-decoration: none;
   font-size: 30px;
 }
 
 /* Farge og stil ved hover over lenker */
 a:hover {
-  color: #66bb6a; /* Mørkere grønn ved hover */
-  text-decoration: underline; /* Understrek lenken */
-  font-size: 45px; /* Øker skriftstørrelsen ved hover */
+  color: #4caf50; /* Mørk grønn ved hover */
+  text-decoration: underline;
+  font-size: 45px;
 }
 
 /* Farge og stil når lenker er aktive */
@@ -120,43 +121,43 @@ a:active {
 /* Styling for knapper */
 .button {
   border: none;
-  color: white;
+  color: #eceff1; /* Lys tekstfarge */
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  transition-duration: 0.4s; /* Smidig overgang når knappen hoveres */
+  transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 10px; /* Runde hjørner på knapper */
+  border-radius: 10px;
 }
 
 /* Spesifikke farger for button1 */
 .button1 {
-  background-color: #4caf50; /* Mørkere grønn */
-  color: black; 
-  border: 2px solid #1b5e20; /* Enda mørkere grønn border */
+  background-color: #8bc34a; /* Lys grønn */
+  color: black;
+  border: 2px solid #37474f; /* Mørk bakgrunn for border */
 }
 
 /* Hover-effekt for button1 */
 .button1:hover {
   background-color: #33691e; /* Mørk grønn ved hover */
   color: white;
-  border: 2px solid #1b5e20; /* Enda mørkere grønn border ved hover */
+  border: 2px solid #37474f; /* Mørk bakgrunn for border ved hover */
 }
 
 /* Styling for top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #424242; /* Mørk grå bakgrunn for kontrast */
-  border: 2px solid #2e7d32; /* Mørkere grønn border */
+  background-color: #263238; /* Mørk gråblå bakgrunn */
+  border: 2px solid #8eb69b; /* Beholder hovedfargen for border */
 }
 
 /* Styling for lenker i navigasjonsmenyen */
 .topnav a {
   float: left;
-  color: #4caf50; /* Grønn tekst */
+  color: #8eb69b; /* Hovedfargen for lenker */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -165,8 +166,8 @@ a:active {
 
 /* Hover-effekt for lenker i navigasjonsmenyen */
 .topnav a:hover {
-  background-color: #2e7d32; /* Mørkere grønn ved hover */
-  color: white; /* Hvit tekst ved hover */
+  background-color: #4caf50; /* Mørk grønn ved hover */
+  color: #263238; /* Mørk bakgrunn for tekst ved hover */
 }
 
 /* Aktiv lenke i navigasjonsmenyen */
@@ -176,14 +177,14 @@ a:active {
 }
 
 .float-img {
-  float: right; /* Align images to the right */
-  margin-left: 15px; /* Add some space between the image and the text */
-  height: auto; /* Maintain aspect ratio */
+  float: right;
+  margin-left: 15px;
+  height: auto;
 }
 
 /* Clear floats after the last image */
 .body::after {
   content: "";
   display: table;
-  clear: both; /* Ensures the parent element clears the floats */
+  clear: both;
 }

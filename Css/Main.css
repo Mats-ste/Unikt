@@ -1,4 +1,3 @@
-
 /* Bakgrunnsfarge for hele nettsiden */
 body {
   background-color: #e3f2f1; /* Lys teal bakgrunn */
@@ -8,8 +7,8 @@ body {
 
 /* Styling for header-delen */
 header {
-  background-color: #4caf50; /* Hovedfargen grønn */
-  border: 2px solid #388e3c; /* Mørkere grønn for border */
+  background-color: #8eb69b; /* Hovedfargen */
+  border: 2px solid #6d8f73; /* Mørkere versjon av hovedfargen for border */
   padding: 30px;
   text-align: center;
   font-size: 35px;
@@ -20,7 +19,7 @@ header {
 .city {
   background-color: #ffffff; /* Hvit bakgrunn for kontrast */
   color: #333333; /* Mørkegrå tekstfarge */
-  border: 2px solid #4caf50; /* Grønn border */
+  border: 2px solid #8eb69b; /* Hovedfargen som border */
   margin: 20px;
   padding: 20px;
 }
@@ -37,7 +36,7 @@ header {
 .left, .right {
   background-color: #ffffff; /* Hvit bakgrunn */
   color: #333333; /* Mørkegrå tekstfarge */
-  border: 2px solid #4caf50; /* Grønn border */
+  border: 2px solid #8eb69b; /* Hovedfargen som border */
   padding: 20px;
   width: 46.7%; /* Litt mindre enn 50% for å få plass til margin */
   display: flex; /* Bruker flexbox for layout */
@@ -48,7 +47,7 @@ header {
 .body {
   background-color: #f1f8e9; /* Veldig lys grønn bakgrunn */
   color: #333333; /* Mørkegrå tekstfarge */
-  border: 2px solid #4caf50; /* Grønn border */
+  border: 2px solid #8eb69b; /* Hovedfargen som border */
   padding: 1px;
   flex: 1; /* Sørger for at body strekker seg og tar opp tilgjengelig plass */
 }
@@ -57,7 +56,7 @@ header {
 .vcity {
   background-color: #ffffff; /* Hvit bakgrunn for kontrast */
   color: #333333; /* Mørkegrå tekstfarge */
-  border: 2px solid #4caf50; /* Grønn border */
+  border: 2px solid #8eb69b; /* Hovedfargen som border */
   margin: 20px 300px 20px; /* Set top margin to 0, left/right margin to 20px, and bottom margin to 20px */
   padding: 20px;
 }
@@ -66,7 +65,7 @@ header {
 .vbody {
   background-color: #f1f8e9; /* Veldig lys grønn bakgrunn */
   color: #333333; /* Mørkegrå tekstfarge */
-  border: 2px solid #4caf50; /* Grønn border */
+  border: 2px solid #8eb69b; /* Hovedfargen som border */
   padding: 5px;
   flex: 1; /* Sørger for at body strekker seg og tar opp tilgjengelig plass */
 }
@@ -80,8 +79,8 @@ header {
 
 /* Styling for footer */
 footer {
-  background-color: #4caf50; /* Grønn bakgrunn */
-  border: 2px solid #388e3c; /* Mørkere grønn for border */
+  background-color: #8eb69b; /* Hovedfargen */
+  border: 2px solid #6d8f73; /* Mørkere versjon av hovedfargen for border */
   padding: 10px;
   text-align: center;
   color: white; /* Hvit tekst for kontrast */
@@ -91,21 +90,21 @@ footer {
 
 /* Standard farge for lenker */
 a:link {
-  color: #388e3c; /* Mørk grønn */
+  color: #6d8f73; /* Mørkere versjon av hovedfargen */
   text-decoration: none;
   font-size: 30px;
 }
 
 /* Farge for besøkte lenker */
 a:visited {
-  color: #388e3c; /* Mørk grønn */
+  color: #6d8f73; /* Mørkere versjon av hovedfargen */
   text-decoration: none;
   font-size: 30px;
 }
 
 /* Farge og stil ved hover over lenker */
 a:hover {
-  color: #1b5e20; /* Enda mørkere grønn */
+  color: #4e704f; /* Enda mørkere versjon av hovedfargen */
   text-decoration: underline; /* Understrek lenken */
   font-size: 45px; /* Øker skriftstørrelsen ved hover */
 }
@@ -135,14 +134,14 @@ a:active {
 
 /* Spesifikke farger for button1 */
 .button1 {
-  background-color: #8bc34a; /* Lys grønn */
+  background-color: #8eb69b; /* Hovedfargen */
   color: black; 
   border: 2px solid #ffffff; /* Hvit border */
 }
 
 /* Hover-effekt for button1 */
 .button1:hover {
-  background-color: #33691e; /* Mørk grønn ved hover */
+  background-color: #6d8f73; /* Mørkere versjon av hovedfargen ved hover */
   color: white;
   border: 2px solid #ffffff; /* Hvit border ved hover */
 }
@@ -151,13 +150,13 @@ a:active {
 .topnav {
   overflow: hidden;
   background-color: #ffffff; /* Hvit bakgrunn for kontrast */
-  border: 2px solid #4caf50; /* Grønn border */
+  border: 2px solid #8eb69b; /* Hovedfargen som border */
 }
 
 /* Styling for lenker i navigasjonsmenyen */
 .topnav a {
   float: left;
-  color: #4caf50; /* Grønn tekst */
+  color: #8eb69b; /* Hovedfargen som tekstfarge */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -166,13 +165,13 @@ a:active {
 
 /* Hover-effekt for lenker i navigasjonsmenyen */
 .topnav a:hover {
-  background-color:  	#50C878; /* Lys teal ved hover */
+  background-color: #a5d6a7; /* Lysere grønn ved hover */
   color: #003403; /* Mørk grønn tekst ved hover */
 }
 
 /* Aktiv lenke i navigasjonsmenyen */
 .topnav a.active {
-  background-color: #1b5e20; /* Mørk grønn for aktiv lenke */
+  background-color: #4e704f; /* Mørkere versjon av hovedfargen for aktiv lenke */
   color: white; /* Hvit tekst for aktiv lenke */
 }
 
@@ -188,4 +187,3 @@ a:active {
   display: table;
   clear: both; /* Ensures the parent element clears the floats */
 }
-
