@@ -49,8 +49,14 @@ header {
   background-color: #455a64; /* Mørk blågrå bakgrunn */
   color: #eceff1; /* Lys tekstfarge */
   border: 2px solid #8eb69b; /* Beholder hovedfargen for border */
-  padding: 1px;
+  padding: 10px; /* Space between the text and the border */
   flex: 1;
+  box-sizing: border-box; /* Ensures padding is included in the element's total size */
+}
+
+.body p {
+  margin: 5px; /* Adds space between the paragraph and the border of the div */
+  color: #eceff1; /* Lys tekstfarge for kontrast mot mørk bakgrunn */
 }
 
 /* Styling for vcity-seksjoner */
@@ -187,4 +193,9 @@ a:active {
   content: "";
   display: table;
   clear: both;
+}
+h2 {
+  color: #8eb69b; /* Hovedfargen for lenker */
+  text-decoration: none;
+  font-size: 30px;
 }

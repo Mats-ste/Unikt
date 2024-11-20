@@ -45,12 +45,19 @@ header {
 
 /* Styling for body-seksjon */
 .body {
-  background-color: #f1f8e9; /* Veldig lys grønn bakgrunn */
-  color: #333333; /* Mørkegrå tekstfarge */
-  border: 2px solid #8eb69b; /* Hovedfargen som border */
-  padding: 1px;
-  flex: 1; /* Sørger for at body strekker seg og tar opp tilgjengelig plass */
+  background-color: #f1f8e9;
+  color: #333333;
+  border: 2px solid #8eb69b;
+  padding: 10px; /* Space between the text and the border */
+  flex: 1;
+  box-sizing: border-box; /* Ensures padding is included in the element's total size */
 }
+
+.body p {
+  margin: 5px; /* Adds space between the paragraph and the border of the div */
+  color: #333333; /* Mørkegrå tekstfarge for god kontrast */
+}
+
 
 /* Styling for vcity-seksjoner */
 .vcity {
@@ -186,4 +193,9 @@ a:active {
   content: "";
   display: table;
   clear: both; /* Ensures the parent element clears the floats */
+}
+h2 {
+  color: #6d8f73; /* Mørkere versjon av hovedfargen */
+  text-decoration: none;
+  font-size: 30px;
 }
