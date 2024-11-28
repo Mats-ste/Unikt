@@ -113,7 +113,6 @@ a:visited {
 a:hover {
   color: #4e704f; /* Enda mørkere versjon av hovedfargen */
   text-decoration: underline; /* Understrek lenken */
-  font-size: 45px; /* Øker skriftstørrelsen ved hover */
 }
 
 /* Farge og stil når lenker er aktive */
@@ -168,6 +167,12 @@ a:active {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+.topnav a.float-right {
+  float: right !important; /* Tvinger lenken til høyre */
+  background-color: #4e704f;
+  color: white;
 }
 
 /* Hover-effekt for lenker i navigasjonsmenyen */
