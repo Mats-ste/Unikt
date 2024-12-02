@@ -56,7 +56,6 @@ h2 {
 /* Styling for body */
 .body {
   background-color: #f4faee; /* Myk, lys grønn */
-  color: #333333; /* Mørk grå tekst */
   border: 2px solid #76a78e;
   padding: 10px;
   flex: 1;
@@ -66,6 +65,7 @@ h2 {
 .body p {
   margin: 5px;
 }
+
 
 /* Clear floats */
 .body::after {
@@ -97,7 +97,7 @@ footer {
 }
 
 /* =========================== */
-/* Navigasjon */
+/* Topp Navigasjon */
 /* =========================== */
 
 .topnav {
@@ -132,6 +132,43 @@ footer {
 }
 
 /* =========================== */
+/* Logg Navigasjon */
+/* =========================== */
+
+.loggnav {
+  overflow: hidden;
+  background-color: #ffffff; /* Hvit for en ren bakgrunn */
+  border: 2px solid #76a78e; /* Harmonisk grønn */
+}
+
+.loggnav a {
+  float: left;
+  color: #5c8570; /* Harmonisk mørk grønn */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.loggnav a.float-right {
+  float: right !important;
+  background-color: #426b55; /* Dyp grønn for kontrast */
+  color: white;
+}
+
+.loggnav a:hover {
+  background-color: #b8dfc2; /* Myk lys grønn for hover */
+  color: #003403; /* Mørk grønn tekst */
+}
+
+.loggnav a.active {
+  background-color: #76a78e; /* Harmonisk grønn for aktiv lenke */
+  color: white;
+}
+
+
+
+/* =========================== */
 /* Media Queries */
 /* =========================== */
 
@@ -158,14 +195,4 @@ th {
   border: 2px solid #92c9a7; /* Myk, grønn linje */
   text-align: left;
   padding: 8px;
-}
-
-/* =========================== */
-/* Bilder */
-/* =========================== */
-
-.float-img {
-  float: right;
-  margin-left: 15px;
-  height: auto; /* Bevarer proporsjonene */
 }
