@@ -1,21 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const stylesheet1 = document.getElementById("stylesheet1");
     const stylesheet2 = document.getElementById("stylesheet2");
     const switchButton = document.getElementById("switchButton");
-    const textElement = document.getElementById("text");
     let isOriginalText = true;
 
-    // Funksjon for å sette en cookie
-    function setCookie(name, value, days) {
+    // Funksjon for å sette en cookie  
+    const setCookie = (name, value, days) => {
         const date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        const expires = "; expires=" + date.toUTCString();
-        document.cookie = name + "=" + value + expires + "; path=/";
-    }
+        const expires = `; expires=${date.toUTCString()}`;
+        document.cookie = `${name}=${value}${expires}; path=/`;
+    };
 
-    // Funksjon for å hente cookie
-    function getCookie(name) {
-        const nameEQ = name + "=";
+    // Funksjon for å hente cookie  
+    const getCookie = (name) => {
+        const nameEQ = `${name}=`;
         const ca = document.cookie.split(';');
         for (let i = 0; i < ca.length; i++) {
             let c = ca[i];
@@ -23,40 +22,40 @@ document.addEventListener("DOMContentLoaded", function () {
             if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
         }
         return null;
-    }
+    };
 
-    // Sjekk om det finnes en cookie for tema
+    // Sjekk om det finnes en cookie for tema  
     const savedTheme = getCookie("theme");
 
     if (savedTheme === "dark") {
-        // Hvis mørk modus er lagret i cookie, sett den tilstand
+        // Hvis mørk modus er lagret i cookie, sett den tilstand  
         stylesheet1.disabled = true;
         stylesheet2.disabled = false;
         switchButton.textContent = "Lys";
         isOriginalText = false;
     } else {
-        // Standard tilstand
+        // Standard tilstand  
         stylesheet1.disabled = false;
         stylesheet2.disabled = true;
         switchButton.textContent = "Mørk";
         isOriginalText = true;
     }
 
-    // Bytt mellom stilark og oppdater knappetekst
-    switchButton.addEventListener("click", function (event) {
+    // Bytt mellom stilark og oppdater knappetekst  
+    switchButton.addEventListener("click", (event) => {
         event.preventDefault(); // Forhindre at lenken oppdaterer siden
-        
-        // Bytt stilark
+
+        // Bytt stilark  
         if (stylesheet1.disabled) {
             stylesheet1.disabled = false;
             stylesheet2.disabled = true;
             switchButton.textContent = "Mørk";
-            setCookie("theme", "light", 7); // Lagre cookie for lys tilstand
+            setCookie("theme", "light", 7); // Lagre cookie for lys tilstand  
         } else {
             stylesheet1.disabled = true;
             stylesheet2.disabled = false;
             switchButton.textContent = "Lys";
-            setCookie("theme", "dark", 7); // Lagre cookie for mørk tilstand
+            setCookie("theme", "dark", 7); // Lagre cookie for mørk tilstand  
         }
     });
 });
