@@ -2,7 +2,9 @@
 <html lang="no">
   <!--Du må altid skrive dette i en html kode-->
 <head>
-  <title> Mine Prosjekter </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <!--Gjør at du kan legge til google fonts-->
+  <title> Om Meg </title>
   <!--Dette er tittelen til nettsiden som vises i nettleserfanen-->
 
   <meta charset="utf-8">
@@ -13,9 +15,9 @@
 </head>
 
     <!-- Default Style -->
-    <link id="stylesheet1" rel="stylesheet" href="../Css/Main.css">
+    <link id="stylesheet1" rel="stylesheet" href="Lys.css">
     <!-- Alternative Style -->
-    <link id="stylesheet2" rel="stylesheet" href="../Css/Dark.css" disabled>
+    <link id="stylesheet2" rel="stylesheet" href="Dark.css" disabled>
 <!-- Linker til et eksternt CSS-stilark for å styre nettsidens utseende -->
 
 <body>
@@ -24,21 +26,20 @@
   <div class="topnav">
     <a href="../index.html"> Hjem </a> <!-- Link til hjemmesiden -->
     <a href="https://www.w3schools.com" target="_blank"> w3schools </a> <!-- Åpner w3schools i en ny fane -->
-    <a href="Test Bilde.html"> Bilde Bakgrunnen </a> <!-- Link til siden med bakgrunnsbilde -->
+    <a href="../HTML/Test Bilde.html"> Bilde Bakgrunnen </a> <!-- Link til siden med bakgrunnsbilde -->
     <a href="Logg.html">Logg</a> <!--Link til Log siden-->
-    <a class="active" href="#">Prosjekter</a> <!--Link til Prosjkter siden-->
+    <a href="Prosjekter.html">Prosjekter</a> <!--Link til Prosjkter siden-->
     <a href="#" class="float-right" id="switchButton">Mørk</a>
     <script src="../Js/Dark Mode.js"></script>
   </div>
-
-  <header>
-    <h1>Mine Prosjekter</h1>
-  </header>
-
-  <div class="city">
-    <a href="skisse.html"><u>Skisse På Nettsiden</u></a>
-    <a href="../Spill/TypeRace.html"><u>Spillet Mit</u></a>
+  
+  <div class="container">
+    <h1>Type Racer - WPM Checker</h1>
+    <p id="text-to-type">The quick brown fox jumps over the lazy dog.</p>
+    <textarea id="typing-area" placeholder="Start typing here..." disabled></textarea>
+    <button id="start-button">Start Test</button>
+    <p id="result"></p>
   </div>
-
+  <script src="Spill.js"></script>
 </body>
 </html>
