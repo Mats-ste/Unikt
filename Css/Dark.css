@@ -22,7 +22,7 @@ a:hover {
 }
 
 a:active {
-  color: #f5d36b; /* Myk lys gul */
+  color: #06b42e; /* Myk lys gul */
   text-decoration: underline;
   font-size: 30px;
 }
@@ -52,6 +52,10 @@ h2 {
   border: 2px solid #76a78e; /* Behold hovedfarge */
   margin: 20px;
   padding: 20px;
+}
+
+.city a {
+  margin-right: 20px; /* Legger til avstand til høyre */
 }
 
 /* Styling for body */
@@ -147,7 +151,7 @@ footer {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 .loggnav a.float-right {
