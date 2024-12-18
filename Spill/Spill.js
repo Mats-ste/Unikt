@@ -29,8 +29,16 @@ input.addEventListener("paste", (e) => {
   alert("Juks er ikke lov! Skriv alfabetet i stedet.");
 });
 
-// Nullstill spillet når du klikker på restart-knappen
-restartButton.addEventListener("click", resetGame);
+restartButton.addEventListener("click", () => {
+  const password = prompt("Skriv inn passord for å tilbakestille beste tid:");
+  if (password === "hemmelig123") { // Passord for å tilbakestille
+    localStorage.removeItem("besteTid");
+    alert("Beste tid er nå tilbakestilt!");
+    bestDisplay.textContent = "Ingen";
+  } else {
+    alert("Feil passord. Du har ikke tilgang til å tilbakestille.");
+  }
+});
 
 input.addEventListener("focus", () => {
   input.value = "";
@@ -41,7 +49,7 @@ input.addEventListener("focus", () => {
 });
 
 input.addEventListener("input", () => {
-  const userInput = input.value.toLowerCase(); // Gjør brukerinput til små bokstaver
+  const userInput = input.value.toLowerCase();
 
   if (!startTime) {
     startTime = Date.now();
@@ -52,16 +60,13 @@ input.addEventListener("input", () => {
   }
 
   if (!targetAlphabet.startsWith(userInput)) {
-    // Hvis det er en feil, gjør input rød og stopp videre skriving
     input.classList.add("error");
-    input.value = input.value.slice(0, -1); // Fjern siste feilaktige tegn
+    input.value = input.value.slice(0, -1);
   } else {
-    // Hvis det ikke er noen feil, fjern rød markering
     input.classList.remove("error");
   }
 
   if (userInput === targetAlphabet) {
-    // Fullført alfabetet
     clearInterval(timer);
     const elapsedTime = (Date.now() - startTime) / 1000;
     timerDisplay.textContent = elapsedTime.toFixed(2);
@@ -74,5 +79,8 @@ input.addEventListener("input", () => {
     }
 
     alert(`Bra jobbet! Tiden din: ${elapsedTime.toFixed(2)} sekunder`);
+
+    // Tøm input-feltet og sett opp spillet på nytt
+    resetGame();
   }
 });

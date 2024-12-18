@@ -199,3 +199,69 @@ th {
   padding: 8px;
   color: #e0e0e0; /* Lys tekst */
 }
+
+/* =========================== */
+/* Spillrelaterte stiler */
+/* =========================== */
+
+/* Input-felt for å skrive alfabetet */
+#input {
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid #76a78e; /* Hovedfargen */
+  border-radius: 5px;
+  color: #e0e0e0; /* Lys tekst for bedre kontrast */
+  background-color: #333333; /* Mørkere bakgrunn */
+}
+
+/* Styling for feil input */
+#input.error {
+  border-color: #ff0000; /* Rød farge for å indikere feil */
+}
+
+/* Styling for knapper i spillet */
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #426d52; /* Grønn knapp */
+  color: white;
+  border: 2px solid #76a78e;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #254e38; /* Mørkere grønn ved hover */
+}
+
+/* Tidsvisning i spillet */
+#timer,
+#best-time {
+  font-size: 18px;
+  color: #76a78e;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Spillinstruksjoner */
+#instructions {
+  font-size: 18px;
+  color: #e0e0e0;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Spill-container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  gap: 10px;
+  padding: 10px;
+  background-color: #2a2a2a;
+  border: 2px solid #76a78e;
+  border-radius: 10px;
+}
