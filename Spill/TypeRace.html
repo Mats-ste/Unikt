@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Type Racer Test</title>
+  <title>Skriv Alfabetet</title>
   <link rel="stylesheet" href="Lys.css">
 </head>
 <body>
   <div class="container">
-    <h1>Type Racer Test</h1>
-    <p id="text-to-type">Klikk på Start for å begynne</p>
-    <textarea id="typing-area" placeholder="Begynn å skrive her..." disabled></textarea>
-    <button id="start-button">Start Test</button>
-    <p id="result">Trykk start for å begynne...</p>
+    <h1>Skriv Alfabetet</h1>
+    <p id="instructions">Skriv hele alfabetet (a-å) så raskt som mulig!</p>
+    <input type="text" id="input" placeholder="Start å skrive her..." />
+    <p id="timer">Tid: <span id="time">0.00</span> sekunder</p>
+    <p id="best-time">Beste Tid: <span id="best">Ingen</span></p>
+    <button id="restart">Spill-knapp</button>
   </div>
   <script src="Spill.js"></script>
 </body>
 </html>
+  

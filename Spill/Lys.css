@@ -53,4 +53,10 @@ body {
     margin-top: 15px;
     color: #333;
   }
+
+  /*Spill*/
+  input.error {
+    border-color: red;
+    color: red;
+  }
   
