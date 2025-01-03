@@ -49,8 +49,10 @@ h2 {
   background-color: #e8f9ef; /* Lys, beroligende grønn */
   color: #333333;
   border: 2px solid #76a78e;
-  margin: 20px;
+  margin: 20px auto; /* Sentrerer boksen */
   padding: 20px;
+  width: 60%; /* Boksen tar opp 50% av skjermbredden */
+  max-width: 4000px; /* Maksimal bredde for større skjermer */
 }
 
 .city a {
