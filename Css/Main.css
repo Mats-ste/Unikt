@@ -92,14 +92,18 @@ footer {
 }
 
 header {
-  padding: 30px;
+  padding: 20px;
   text-align: center;
   font-size: 35px;
+  width: 95%;
+  margin: 0px auto;
 }
 
 footer {
   padding: 10px;
   text-align: center;
+  width: 95%;
+  margin: 0px auto;
 }
 
 /* =========================== */
@@ -110,6 +114,8 @@ footer {
   overflow: hidden;
   background-color: #ffffff;
   border: 2px solid #76a78e;
+  width: 95%;
+  margin: 0px auto;
 }
 
 .topnav a {
@@ -145,6 +151,9 @@ footer {
   overflow: hidden;
   background-color: #ffffff; /* Hvit for en ren bakgrunn */
   border: 2px solid #76a78e; /* Harmonisk grønn */
+  margin: 20px auto; /* Sentrerer boksen */
+  width: 65%; /* Boksen tar opp 50% av skjermbredden */
+  max-width: 4000px; /* Maksimal bredde for større skjermer */
 }
 
 .loggnav a {
@@ -153,7 +162,7 @@ footer {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .loggnav a.float-right {
