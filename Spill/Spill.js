@@ -50,7 +50,6 @@ input.addEventListener("focus", () => {
 
 input.addEventListener("input", () => {
   const userInput = input.value.toLowerCase();
-
   if (!startTime) {
     startTime = Date.now();
     timer = setInterval(() => {
