@@ -248,7 +248,9 @@ button:hover {
 
 /* Tidsvisning i spillet */
 #timer,
-#best-time {
+#best-time,
+#reverse-best-time,
+#reverse-time {
   font-size: 18px;
   color: #76a78e;
   text-align: center;
