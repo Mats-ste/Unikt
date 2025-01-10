@@ -21,6 +21,11 @@ let reverseTimer = null;
 let reverseBestTime = localStorage.getItem("besteBaklengsTid");
 let reverseMode = false;
 
+// Tilbakestill input-feltet når siden lastes inn
+window.addEventListener("load", () => {
+  input.value = ""; // Nullstill input-feltet
+});
+
 // Oppdater beste tider
 if (bestTime) bestDisplay.textContent = `${parseFloat(bestTime).toFixed(2)} sekunder`;
 if (reverseBestTime) reverseBestDisplay.textContent = `${parseFloat(reverseBestTime).toFixed(2)} sekunder`;
@@ -115,8 +120,4 @@ input.addEventListener("input", () => {
     alert(`Bra jobbet! Tiden din: ${elapsedTime.toFixed(2)} sekunder`);
     resetGame();
   }
-});
-// Tilbakestill input-feltet når siden lastes inn
-window.addEventListener("load", () => {
-  input.value = ""; // Nullstill input-feltet
 });
