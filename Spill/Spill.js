@@ -116,3 +116,7 @@ input.addEventListener("input", () => {
     resetGame();
   }
 });
+// Tilbakestill input-feltet når siden lastes inn
+window.addEventListener("load", () => {
+  input.value = ""; // Nullstill input-feltet
+});
