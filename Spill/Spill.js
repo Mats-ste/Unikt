@@ -1,153 +1,118 @@
-// Hent HTML-elementer for input-felt, tidtaker, beste tid, restart-knappen og baklengs-knappene
+// Hent HTML-elementer
 const input = document.getElementById("input");
-const timerDisplay = document.getElementById("time");
-const bestDisplay = document.getElementById("best");
+const timerDisplay = document.getElementById("normal-time");
+const bestDisplay = document.getElementById("normal-best");
+const reverseTimerDisplay = document.getElementById("reverse-time");
+const reverseBestDisplay = document.getElementById("reverse-best-time-display");
 const restartButton = document.getElementById("restart");
 const reverseButton = document.getElementById("reverse");
 const normalButton = document.getElementById("normal");
-const reverseBestDisplay = document.getElementById("reverse-best");
-const reverseBestTimeDisplay = document.getElementById("reverse-best-time-display");
 
-// Norsk alfabet inkludert Æ, Ø, Å
-let targetAlphabet = "abcdefghijklmnopqrstuvwxyzæøå"; // Standard alfabet
+// Alfabet
+let targetAlphabet = "abcdefghijklmnopqrstuvwxyzæøå";
+let reverseAlphabet = "åøæzyxwvutsrqponmlkjihgfedcba";
+
+// Variabler
 let startTime = null;
 let timer = null;
 let bestTime = localStorage.getItem("besteTid");
-let reverseMode = false; // Variabel for å holde styr på om vi er i baklengs modus eller ikke
-let reverseStartTime = null; // Tid for baklengs modus
-let reverseTimer = null; // Tidtaker for baklengs modus
-let reverseBestTime = localStorage.getItem("besteBaklengsTid"); // Lagre beste baklengs tid
+let reverseStartTime = null;
+let reverseTimer = null;
+let reverseBestTime = localStorage.getItem("besteBaklengsTid");
+let reverseMode = false;
 
-// Oppdater visning for beste tid hvis en lagret tid eksisterer
-if (bestTime) {
-  bestDisplay.textContent = `${parseFloat(bestTime).toFixed(2)} sekunder`;
-}
+// Oppdater beste tider
+if (bestTime) bestDisplay.textContent = `${parseFloat(bestTime).toFixed(2)} sekunder`;
+if (reverseBestTime) reverseBestDisplay.textContent = `${parseFloat(reverseBestTime).toFixed(2)} sekunder`;
 
-if (reverseBestTime) {
-  reverseBestTimeDisplay.textContent = `${parseFloat(reverseBestTime).toFixed(2)} sekunder`;
-}
-
-// Funksjon for å tilbakestille spillet
+// Tilbakestill spillet
 function resetGame() {
-  clearInterval(timer); // Stopp tidtakeren
-  clearInterval(reverseTimer); // Stopp baklengs tidtaker
-  timer = null; // Nullstill tidtaker
-  reverseTimer = null; // Nullstill baklengs tidtaker
-  startTime = null; // Nullstill starttid for normal modus
-  reverseStartTime = null; // Nullstill starttid for baklengs modus
-  input.value = ""; // Tøm input-feltet
-  input.classList.remove("error"); // Fjern feilstil
-  timerDisplay.textContent = "0.00"; // Nullstill tidtaker-visningen
-  reverseBestDisplay.textContent = "Ingen"; // Nullstill baklengs tid
-  input.focus(); // Sett fokus på input-feltet
+  clearInterval(timer);
+  clearInterval(reverseTimer);
+  startTime = null;
+  reverseStartTime = null;
+  input.value = "";
+  input.classList.remove("error");
+  timerDisplay.textContent = "0.00";
+  reverseTimerDisplay.textContent = "0.00";
+  input.focus();
 }
 
-// Forhindrer brukere fra å lime inn tekst (for å hindre juks)
+// Forhindre liming
 input.addEventListener("paste", (e) => {
   e.preventDefault();
   alert("Juks er ikke lov! Skriv alfabetet i stedet.");
 });
 
-// Tilbakestill beste tid ved å klikke på restart-knappen
+// Reset beste tider
 restartButton.addEventListener("click", () => {
   const password = prompt("Skriv inn passord for å tilbakestille beste tid:");
-  if (password === "hemmelig123") { // Passord for å tilbakestille
-    localStorage.removeItem("besteTid"); // Fjern lagret beste tid
-    localStorage.removeItem("besteBaklengsTid"); // Fjern lagret baklengs tid
+  if (password === "hemmelig123") {
+    localStorage.removeItem("besteTid");
+    localStorage.removeItem("besteBaklengsTid");
     alert("Beste tid er nå tilbakestilt!");
-    bestDisplay.textContent = "Ingen"; // Oppdater visningen
-    reverseBestTimeDisplay.textContent = "Ingen"; // Oppdater visningen for baklengs beste tid
+    bestDisplay.textContent = "Ingen";
+    reverseBestDisplay.textContent = "Ingen";
   } else {
-    alert("Feil passord. Du har ikke tilgang til å tilbakestille.");
+    alert("Feil passord.");
   }
 });
 
-// Håndter når brukeren trykker på knappen for å skrive baklengs
+// Bytt til baklengs modus
 reverseButton.addEventListener("click", () => {
-  reverseMode = true; // Aktiver baklengs modus
-  targetAlphabet = "åøæzyxwvutsrqponmlkjihgfedcba"; // Sett alfabetet til baklengs
-  resetGame(); // Tilbakestill spillet for den nye rekkefølgen
-  timerDisplay.textContent = "0.00"; // Nullstill tidtaker-visningen
-  reverseBestDisplay.textContent = "0.00"; // Nullstill baklengs tid
+  reverseMode = true;
+  resetGame();
 });
 
-// Håndter når brukeren trykker på knappen for å gå tilbake til normal modus
+// Gå tilbake til normal modus
 normalButton.addEventListener("click", () => {
-  reverseMode = false; // Deaktiver baklengs modus
-  targetAlphabet = "abcdefghijklmnopqrstuvwxyzæøå"; // Sett alfabetet tilbake til normalt
-  resetGame(); // Tilbakestill spillet til normal modus
-  timerDisplay.textContent = "0.00"; // Nullstill tidtaker-visningen
-  reverseBestDisplay.textContent = "Ingen"; // Nullstill baklengs tid
+  reverseMode = false;
+  resetGame();
 });
 
-// Klargjør spillet når brukeren klikker på input-feltet
-input.addEventListener("focus", () => {
-  input.value = ""; // Tøm input-feltet
-  input.classList.remove("error"); // Fjern feilstil
-  startTime = null; // Nullstill starttid for normal modus
-  reverseStartTime = null; // Nullstill starttid for baklengs modus
-  clearInterval(timer); // Stopp tidtakeren
-  clearInterval(reverseTimer); // Stopp baklengs tidtaker
-  timerDisplay.textContent = "0.00"; // Nullstill tidtaker-visningen
-  reverseBestDisplay.textContent = "Ingen"; // Nullstill baklengs tid
-});
-
-// Håndter brukerens input (for både normal og baklengs)
+// Start spillet
 input.addEventListener("input", () => {
-  const userInput = input.value.toLowerCase(); // Konverter input til små bokstaver
+  const userInput = input.value.toLowerCase();
+  const currentAlphabet = reverseMode ? reverseAlphabet : targetAlphabet;
 
-  // Start tidtakeren for normal modus
-  if (!startTime && !reverseMode) {
-    startTime = Date.now(); // Sett starttid for normal modus
+  if (!startTime) {
+    startTime = Date.now();
     timer = setInterval(() => {
-      const currentTime = (Date.now() - startTime) / 1000; // Beregn forløpt tid
-      timerDisplay.textContent = currentTime.toFixed(2); // Oppdater tidtaker-visningen for normal modus
-    }, 10); // Oppdatering hvert 10. millisekund
+      const elapsed = (Date.now() - startTime) / 1000;
+      if (reverseMode) {
+        reverseTimerDisplay.textContent = elapsed.toFixed(2);
+      } else {
+        timerDisplay.textContent = elapsed.toFixed(2);
+      }
+    }, 10);
   }
 
-  // Start baklengs tidtaker for baklengs modus
-  if (!reverseStartTime && reverseMode) {
-    reverseStartTime = Date.now(); // Sett starttid for baklengs modus
-    reverseTimer = setInterval(() => {
-      const currentTime = (Date.now() - reverseStartTime) / 1000; // Beregn forløpt tid
-      reverseBestDisplay.textContent = currentTime.toFixed(2); // Oppdater baklengs tid
-    }, 10); // Oppdatering hvert 10. millisekund
-  }
-
-  // Sjekk om brukerens input matcher alfabetet (enten normalt eller baklengs)
-  if (!targetAlphabet.startsWith(userInput)) {
-    input.classList.add("error"); // Marker feil
-    input.value = input.value.slice(0, -1); // Fjern siste feilaktige bokstav
+  if (!currentAlphabet.startsWith(userInput)) {
+    input.classList.add("error");
+    input.value = input.value.slice(0, -1);
   } else {
-    input.classList.remove("error"); // Fjern feilstil hvis alt stemmer
+    input.classList.remove("error");
   }
 
-  // Sjekk om brukeren har skrevet hele alfabetet korrekt
-  if (userInput === targetAlphabet) {
-    clearInterval(timer); // Stopp tidtakeren
-    clearInterval(reverseTimer); // Stopp baklengs tidtaker
-    const elapsedTime = (Date.now() - startTime) / 1000; // Beregn forløpt tid for normal modus
-    const reverseElapsedTime = (Date.now() - reverseStartTime) / 1000; // Beregn forløpt tid for baklengs modus
+  if (userInput === currentAlphabet) {
+    clearInterval(timer);
+    const elapsedTime = (Date.now() - startTime) / 1000;
 
-    if (!reverseMode) {
-      timerDisplay.textContent = elapsedTime.toFixed(2); // Oppdater tidtaker-visningen for normal modus
-      if (!bestTime || elapsedTime < parseFloat(bestTime)) {
-        bestTime = elapsedTime.toFixed(2);
-        localStorage.setItem("besteTid", bestTime); // Lagre ny beste tid
-        bestDisplay.textContent = `${bestTime} sekunder`; // Oppdater visningen
+    if (reverseMode) {
+      if (!reverseBestTime || elapsedTime < parseFloat(reverseBestTime)) {
+        reverseBestTime = elapsedTime.toFixed(2);
+        localStorage.setItem("besteBaklengsTid", reverseBestTime);
+        reverseBestDisplay.textContent = `${reverseBestTime} sekunder`;
       }
     } else {
-      reverseBestDisplay.textContent = reverseElapsedTime.toFixed(2); // Oppdater tidtaker-visningen for baklengs
-      if (!reverseBestTime || reverseElapsedTime < parseFloat(reverseBestTime)) {
-        reverseBestTime = reverseElapsedTime.toFixed(2);
-        localStorage.setItem("besteBaklengsTid", reverseBestTime); // Lagre ny beste baklengs tid
-        reverseBestTimeDisplay.textContent = `${reverseBestTime} sekunder`; // Oppdater beste baklengs tid
+      if (!bestTime || elapsedTime < parseFloat(bestTime)) {
+        bestTime = elapsedTime.toFixed(2);
+        localStorage.setItem("besteTid", bestTime);
+        bestDisplay.textContent = `${bestTime} sekunder`;
       }
     }
 
-    alert(`Bra jobbet! Tiden din: ${reverseMode ? reverseElapsedTime.toFixed(2) : elapsedTime.toFixed(2)} sekunder`);
-
-    // Tilbakestill spillet for en ny runde
+    alert(`Bra jobbet! Tiden din: ${elapsedTime.toFixed(2)} sekunder`);
     resetGame();
   }
 });

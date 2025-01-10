@@ -247,10 +247,10 @@ button:hover {
 }
 
 /* Tidsvisning i spillet */
-#timer,
+#normal-timer,
 #best-time,
 #reverse-best-time,
-#reverse-time {
+#reverse-timer {
   font-size: 18px;
   color: #5c8570; /* Harmonisk grønn */
   text-align: center;
