@@ -70,6 +70,7 @@ h2 {
 
 .body p {
   margin: 5px;
+  font-size: 20px;
 }
 
 
@@ -105,6 +106,38 @@ footer {
   width: 95%;
   margin: 0px auto;
 }
+
+footer h2 {
+    color: #ffffff; /* Harmonisk mørk grønn */
+    font-size: 30px;
+  }
+
+/* Responsivitet for mindre skjermer */
+@media (max-width: 768px) {
+  header {
+    font-size: 28px; /* Reduserer fontstørrelsen for små skjermer */
+    padding: 15px; /* Reduserer padding */
+  }
+
+  footer {
+    font-size: 14px; /* Reduserer fontstørrelsen i footeren */
+    padding: 8px; /* Reduserer padding */
+  }
+}
+
+/* Responsivitet for veldig små skjermer */
+@media (max-width: 480px) {
+  header {
+    font-size: 24px; /* Reduserer fontstørrelsen ytterligere */
+    padding: 10px; /* Reduserer padding ytterligere */
+  }
+
+  footer {
+    font-size: 12px; /* Minsker fontstørrelsen på veldig små skjermer */
+    padding: 6px; /* Minsker padding på veldig små skjermer */
+  }
+}
+
 
 /* =========================== */
 /* Topp Navigasjon */
