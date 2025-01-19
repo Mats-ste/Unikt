@@ -279,3 +279,44 @@ button:hover {
   border: 2px solid #76a78e;
   border-radius: 10px;
 }
+
+/* =========================== */
+/* Styling for the Forbrenningsanlegg section */
+/* =========================== */
+
+/* Container for the Forbrenningsanlegg section */
+.forbrenningsanlegg-container {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333333;
+  color: #e0e0e0;
+  border: 2px solid #76a78e;
+  max-width: 1000px; /* Limit the width for better readability */
+  border-radius: 8px;
+}
+
+/* Styling for each header in the Forbrenningsanlegg section */
+.forbrenningsanlegg-container h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Styling for paragraphs inside the Forbrenningsanlegg section */
+.forbrenningsanlegg-container p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* List items (if you decide to make bullet points) */
+.forbrenningsanlegg-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.forbrenningsanlegg-container li {
+  margin-bottom: 10px;
+}
+
