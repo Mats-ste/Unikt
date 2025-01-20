@@ -320,3 +320,65 @@ button:hover {
   margin-bottom: 10px;
 }
 
+/* =========================== */
+/* Styling for the quiz-container */
+/* =========================== */
+
+.quiz-container {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333333; /* Samme bakgrunn som Forbrenningsanlegg-seksjonen */
+  color: #e0e0e0; /* Lys tekst */
+  border: 2px solid #76a78e; /* Grønn kant for å matche hovedfargen */
+  max-width: 1000px; /* Samme maks bredde som Forbrenningsanlegg-seksjonen */
+  border-radius: 8px; /* Runde hjørner for å matche */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lett skygge for en tredimensjonal effekt */
+}
+
+.quiz-container h2 {
+  font-size: 28px; /* Samme størrelse som Forbrenningsanlegg-seksjonens h2 */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.quiz-container p {
+  font-size: 18px; /* Samme fontstørrelse som i Forbrenningsanlegg-seksjonen */
+  margin-bottom: 15px;
+  line-height: 1.6; /* Bedre lesbarhet med linjehøyde */
+}
+
+.quiz-container input[type="radio"] {
+  margin-right: 10px;
+}
+
+.quiz-container label {
+  font-size: 16px;
+  color: #e0e0e0;
+}
+
+.quiz-container button {
+  background-color: #76a78e; /* Grønn knapp for konsistens */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-container button:hover {
+  background-color: #5a8f71; /* Mørkere grønn ved hover */
+}
+
+#quizResult {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  color: #e0e0e0;
+}
+
+#quizResult.warning {
+  color: red;
+}

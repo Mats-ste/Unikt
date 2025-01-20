@@ -18,6 +18,12 @@
   <!-- Alternative Style -->
   <link id="stylesheet2" rel="stylesheet" href="../Css/Dark.css" disabled>
   <!-- Linker til et eksternt CSS-stilark for å styre nettsidens utseende -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Linker til Chart.js for å lage grafer -->
+  <script src="../Js/interaktiv_tabell.js"></script>
+  <!-- Linker til JavaScript-filen som inneholder funksjoner for interaktiv tabell -->
+  <script src="../Js/sjekkQuiz.js"></script>
+  <!-- Linker til JavaScript-filen som inneholder funksjoner for quiz -->
 </head>
 <body>
 
@@ -48,6 +54,33 @@
     </p>
   </div>
 
+  <div class="quiz-container">
+    <h2>Quiz: Hva kan kastes i et forbrenningsanlegg?</h2>
+    <form id="quizForm">
+      <p>1. Kan papir kastes i et forbrenningsanlegg?</p>
+      <input type="radio" id="spm1-yes" name="spm1" value="correct">
+      <label for="spm1-yes">Ja</label><br>
+      <input type="radio" id="spm1-no" name="spm1" value="wrong">
+      <label for="spm1-no">Nei</label><br><br>
+  
+      <p>2. Kan glass kastes i et forbrenningsanlegg?</p>
+      <input type="radio" id="spm2-yes" name="spm2" value="wrong">
+      <label for="spm2-yes">Ja</label><br>
+      <input type="radio" id="spm2-no" name="spm2" value="correct">
+      <label for="spm2-no">Nei</label><br><br>
+  
+      <p>3. Kan plastposer kastes i et forbrenningsanlegg?</p>
+      <input type="radio" id="spm3-yes" name="spm3" value="correct">
+      <label for="spm3-yes">Ja</label><br>
+      <input type="radio" id="spm3-no" name="spm3" value="wrong">
+      <label for="spm3-no">Nei</label><br><br>
+  
+      <button type="button" onclick="sjekkQuiz()">Send inn</button>
+    </form>
+    <p id="quizResult"></p>
+  </div>
+  
+
   <div class="forbrenningsanlegg-container">
     <h2>Positive effekter av forbrenningsanlegg:</h2>
     <p>
@@ -60,6 +93,35 @@
     </p>
   </div>
 
+  <div class="forbrenningsanlegg-container">
+    <h2>Daglig avfall brent</h2>
+    <table id="avfallTabell">
+      <thead>
+        <tr>
+          <th>Dag</th>
+          <th>Kg Avfall</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rader legges til dynamisk -->
+      </tbody>
+    </table>
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="leggTilRad()">Legg til rad</button>
+      <button onclick="beregnSum()">Beregn total avfall</button>
+      <p id="totalAvfall" style="margin-top: 10px;">Total avfall: 0 kg</p>
+    </div>
+  </div>
+  
+  <div class="forbrenningsanlegg-container">
+    <h2>Graf for daglig avfall</h2>
+    <canvas id="avfallGraf" width="400" height="200"></canvas>
+    <div style="text-align: center; margin-top: 10px;">
+      <button onclick="oppdaterGraf()">Oppdater graf</button>
+      <p id="stromProduksjon" style="margin-top: 10px;">Estimert strømproduksjon: 0 kWh</p>
+    </div>
+  </div>  
+  
   <div class="forbrenningsanlegg-container">
     <h2>Forbrenningsanlegg og miljøet</h2>
     <p>
