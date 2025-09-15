@@ -1,0 +1,150 @@
+/* =========================== */
+/* Generelle stiler */
+/* =========================== */
+
+body {
+  background-color: #e6f7f4; /* Myk og lys teal */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+
+/* Lenker */
+a:link,
+a:visited {
+  color: #5c8570;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+a:hover {
+  color: #426b55;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #f5d36b;
+  text-decoration: underline;
+}
+
+/* =========================== */
+/* Header og footer */
+/* =========================== */
+
+header,
+footer {
+  background-color: #76a78e; /* Harmonisk grønn */
+  border: 2px solid #5c8570;
+  color: white;
+  text-align: center;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+header {
+  padding: 20px;
+  font-size: 35px;
+}
+
+footer {
+  padding: 10px;
+  font-size: 18px;
+}
+
+footer h2 {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+/* =========================== */
+/* FAQ Layout */
+/* =========================== */
+
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+/* Kategorier */
+.category {
+  background-color: #e8f9ef;
+  color: #5c8570;
+  border: 2px solid #76a78e;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 25px;
+  font-size: 26px;
+}
+
+/* Spørsmål */
+.question {
+  width: 100%;
+  background-color: #ffffff;
+  color: #5c8570;
+  border: 2px solid #76a78e;
+  padding: 14px;
+  margin: 8px 0;
+  font-size: 20px;
+  text-align: left;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.question:hover {
+  background-color: #b8dfc2;
+  color: #003403;
+}
+
+/* Svar */
+.answer {
+  display: none;
+  background-color: #f4faee;
+  border: 2px solid #92c9a7;
+  border-radius: 5px;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* =========================== */
+/* Responsivitet */
+/* =========================== */
+
+@media (max-width: 768px) {
+  header {
+    font-size: 28px;
+    padding: 15px;
+  }
+  footer {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .category {
+    font-size: 22px;
+  }
+  .question {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 24px;
+    padding: 10px;
+  }
+  footer {
+    font-size: 12px;
+    padding: 6px;
+  }
+  .category {
+    font-size: 20px;
+  }
+  .question {
+    font-size: 16px;
+  }
+}
