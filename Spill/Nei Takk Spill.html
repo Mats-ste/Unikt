@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <title>ABC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link id="stylesheet1" rel="stylesheet" href="../Css/Main.css">
+  <link id="stylesheet2" rel="stylesheet" href="../Css/Dark.css" disabled>
+</head>
+<body>
+  <!-- Navigasjonsmeny -->
+  <div class="topnav">
+    <a href="../index.html">Hjem</a>
+    <a href="https://www.w3schools.com" target="_blank">w3schools</a>
+    <a href="../HTML/Test Bilde.html">Bilde Bakgrunnen</a>
+    <a href="../HTML/Logg.html">Logg</a>
+    <a class="active" href="../HTML/Prosjekter.html">Prosjekter</a>
+    <a href="#" class="float-right" id="switchButton">Mørk</a>
+    <script src="../Js/Dark Mode.js"></script>
+  </div>
+
+  <header>
+    <h1>Skriv "Nei takk"</h1>
+  </header>
+  
+  <div class="city">
+    <div class="body">
+      <h2>Skriv setningen <strong>"Nei takk"</strong> så raskt som mulig</h2>
+      <input type="text" id="input" placeholder="Start å skrive her...">
+      
+      <p id="normal-timer">Tid (normal): <span id="normal-time">0.00</span> sekunder</p>
+      <p id="best-time">Beste tid (normal): <span id="normal-best">Ingen</span></p>
+      <br>
+      <p id="reverse-timer">Tid (baklengs): <span id="reverse-time">0.00</span> sekunder</p>
+      <p id="reverse-best-time">Beste tid (baklengs): <span id="reverse-best-time-display">Ingen</span></p>
+      
+      <button id="restart">Reset tiden din</button>
+      <button id="reverse">Skriv baklengs</button>
+      <button id="normal">Gå tilbake til normal</button>
+    </div>
+  </div>
+
+  <footer>
+    <h2>"Slutt." – siden teksten er ferdig</h2>
+  </footer>
+
+  <!-- JS -->
+  <script src="Js/DarkMode.js"></script>
+  <script src="Nei Takk Spill.js"></script>
+</body>
+</html>
