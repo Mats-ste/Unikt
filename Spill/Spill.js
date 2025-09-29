@@ -15,15 +15,18 @@ let reverseAlphabet = "åøæzyxwvutsrqponmlkjihgfedcba";
 // Variabler
 let startTime = null;
 let timer = null;
-let bestTime = localStorage.getItem("besteTid");
-let reverseStartTime = null;
-let reverseTimer = null;
-let reverseBestTime = localStorage.getItem("besteBaklengsTid");
 let reverseMode = false;
+
+// --- Unike localStorage-nøkler for alfabet-spillet ---
+const normalKey = "spillABC_bestTid";
+const reverseKey = "spillABC_bestTidBaklengs";
+
+let bestTime = localStorage.getItem(normalKey);
+let reverseBestTime = localStorage.getItem(reverseKey);
 
 // Tilbakestill input-feltet når siden lastes inn
 window.addEventListener("load", () => {
-  input.value = ""; // Nullstill input-feltet
+  input.value = "";
 });
 
 // Oppdater beste tider
@@ -33,9 +36,7 @@ if (reverseBestTime) reverseBestDisplay.textContent = `${parseFloat(reverseBestT
 // Tilbakestill spillet
 function resetGame() {
   clearInterval(timer);
-  clearInterval(reverseTimer);
   startTime = null;
-  reverseStartTime = null;
   input.value = "";
   input.classList.remove("error");
   timerDisplay.textContent = "0.00";
@@ -53,8 +54,8 @@ input.addEventListener("paste", (e) => {
 restartButton.addEventListener("click", () => {
   const password = prompt("Skriv inn passord for å tilbakestille beste tid:");
   if (password === "hemmelig123") {
-    localStorage.removeItem("besteTid");
-    localStorage.removeItem("besteBaklengsTid");
+    localStorage.removeItem(normalKey);
+    localStorage.removeItem(reverseKey);
     alert("Beste tid er nå tilbakestilt!");
     bestDisplay.textContent = "Ingen";
     reverseBestDisplay.textContent = "Ingen";
@@ -79,16 +80,13 @@ normalButton.addEventListener("click", () => {
 input.addEventListener("input", () => {
   const userInput = input.value.toLowerCase();
   const currentAlphabet = reverseMode ? reverseAlphabet : targetAlphabet;
+  const displayTimer = reverseMode ? reverseTimerDisplay : timerDisplay;
 
   if (!startTime) {
     startTime = Date.now();
     timer = setInterval(() => {
       const elapsed = (Date.now() - startTime) / 1000;
-      if (reverseMode) {
-        reverseTimerDisplay.textContent = elapsed.toFixed(2);
-      } else {
-        timerDisplay.textContent = elapsed.toFixed(2);
-      }
+      displayTimer.textContent = elapsed.toFixed(2);
     }, 10);
   }
 
@@ -106,13 +104,13 @@ input.addEventListener("input", () => {
     if (reverseMode) {
       if (!reverseBestTime || elapsedTime < parseFloat(reverseBestTime)) {
         reverseBestTime = elapsedTime.toFixed(2);
-        localStorage.setItem("besteBaklengsTid", reverseBestTime);
+        localStorage.setItem(reverseKey, reverseBestTime);
         reverseBestDisplay.textContent = `${reverseBestTime} sekunder`;
       }
     } else {
       if (!bestTime || elapsedTime < parseFloat(bestTime)) {
         bestTime = elapsedTime.toFixed(2);
-        localStorage.setItem("besteTid", bestTime);
+        localStorage.setItem(normalKey, bestTime);
         bestDisplay.textContent = `${bestTime} sekunder`;
       }
     }

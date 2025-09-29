@@ -15,10 +15,14 @@ let reverseText = targetText.split("").reverse().join("");
 // Variabler
 let startTime = null;
 let timer = null;
-let bestTime = localStorage.getItem("besteTid");
-let reverseStartTime = null;
-let reverseTimer = null;
-let reverseBestTime = localStorage.getItem("besteBaklengsTid");
+
+// --- Lokal storage-nøkler ---
+const normalKey = "spill1_bestTid";         // unik nøkkel for normal modus
+const reverseKey = "spill1_bestTidBaklengs"; // unik nøkkel for baklengs modus
+
+let bestTime = localStorage.getItem(normalKey);
+let reverseBestTime = localStorage.getItem(reverseKey);
+
 let reverseMode = false;
 
 // Tilbakestill input-feltet når siden lastes inn
@@ -33,9 +37,7 @@ if (reverseBestTime) reverseBestDisplay.textContent = `${parseFloat(reverseBestT
 // Tilbakestill spillet
 function resetGame() {
   clearInterval(timer);
-  clearInterval(reverseTimer);
   startTime = null;
-  reverseStartTime = null;
   input.value = "";
   input.classList.remove("error");
   timerDisplay.textContent = "0.00";
@@ -53,8 +55,8 @@ input.addEventListener("paste", (e) => {
 restartButton.addEventListener("click", () => {
   const password = prompt("Skriv inn passord for å tilbakestille beste tid:");
   if (password === "hemmelig123") {
-    localStorage.removeItem("besteTid");
-    localStorage.removeItem("besteBaklengsTid");
+    localStorage.removeItem(normalKey);
+    localStorage.removeItem(reverseKey);
     alert("Beste tid er nå tilbakestilt!");
     bestDisplay.textContent = "Ingen";
     reverseBestDisplay.textContent = "Ingen";
@@ -108,13 +110,13 @@ input.addEventListener("input", () => {
     if (reverseMode) {
       if (!reverseBestTime || elapsedTime < parseFloat(reverseBestTime)) {
         reverseBestTime = elapsedTime.toFixed(2);
-        localStorage.setItem("besteBaklengsTid", reverseBestTime);
+        localStorage.setItem(reverseKey, reverseBestTime);
         reverseBestDisplay.textContent = `${reverseBestTime} sekunder`;
       }
     } else {
       if (!bestTime || elapsedTime < parseFloat(bestTime)) {
         bestTime = elapsedTime.toFixed(2);
-        localStorage.setItem("besteTid", bestTime);
+        localStorage.setItem(normalKey, bestTime);
         bestDisplay.textContent = `${bestTime} sekunder`;
       }
     }
